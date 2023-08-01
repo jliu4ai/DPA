@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="32adb54c-f6b4-469e-a324-79d1e85c101c" name="snellius">
+        <fileTransfer rootFolder="/home/jqiao/project/PointCloud/FSPS" accessType="SFTP" host="snellius.surf.nl" port="22" sshConfigId="7deaf6f4-e65f-4499-bbe2-d41ad2f80e5d" sshConfig="jqiao@snellius.surf.nl:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
