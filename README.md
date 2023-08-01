@@ -1,22 +1,11 @@
 # Dynamic Prototype Adaptation with Distillation for Few-shot Point Cloud Semantic Segmentation
 
-![teaser](framework.jpg)
+![teaser](asset/framework.pdf)
 
 ## Introduction
-This repository contains the PyTorch implementation for our CVPR 2021 Paper 
-"[Few-shot 3D Point Cloud Semantic Segmentation](https://arxiv.org/pdf/2006.12052.pdf)" by Na Zhao, Tat-Seng Chua, Gim Hee Lee.
 
-Many existing approaches for point cloud semantic segmentation are fully supervised. These fully supervised approaches 
-heavily rely on a large amount of labeled training data that is difficult to obtain and can not generalize to unseen 
-classes after training. To mitigate these limitations, we propose a novel attention-aware multi-prototype transductive 
-few-shot point cloud semantic segmentation method to segment new classes given a few labeled examples. Specifically, 
-each class is represented by multiple prototypes to model the complex data distribution of 3D point clouds. 
-Subsequently, we employ a transductive label propagation method to exploit the affinities between labeled 
-multi-prototypes and unlabeled query points, and among the unlabeled query points. Furthermore, we design an 
-attention-aware multi-level feature learning network to learn the discriminative features that capture the semantic 
-correlations and geometric dependencies between points. Our proposed method shows significant and consistent 
-improvements compared to the baselines in different few-shot point cloud segmentation settings (i.e. 2/3-way 1/5-shot) 
-on two benchmark datasets.
+Few-shot point cloud segmentation seeks to generate per-point mask for previously unseen categories, using only a minimal set of annotated point clouds as reference. Existing prototype-based methods rely on support prototypes to guide the segmentation of query point clouds, but they encounter challenges when significant object variations exist between the support prototypes and query features. In this work, we present dynamic prototype adaptation (DPA), which explicitly learns task-specific prototypes for each query point cloud to tackle the object variations problem. DPA achieves the adaptation through prototype rectification, aligning 
+vanilla prototypes from support with the query feature distribution, and prototype-to-query attention, extracting task-specific context from query point clouds. Furthermore, we introduce prototype distillation regularization term, enabling knowledge transfer between early-stage prototypes and their deeper counterparts during adaption. By iteratively applying these adaptations, we generate task-specific prototypes for accurate mask predictions on query point clouds. Extensive experiments on two popular benchmarks show that DPA surpasses state-of-the-art methods by a significant margin,  e.g., 7.43\% and 6.39\% under the 2-way 1-shot setting on S3DIS and ScanNet, respectively. Code will be released.
 
 
 ## Installation
@@ -70,16 +59,16 @@ It may work with newer versions, but that is not gauranteed.
 First, pretrain the segmentor which includes feature extractor module on the available training set:
     
     cd scripts
-    bash pretrain_segmentor.sh
+    bash pretrain.sh
 
 Second, train our method:
 	
-	bash train_attMPTI.sh
+	bash train.sh
 
 
 #### Evaluation
     
-    bash eval_attMPTI.sh
+    bash eval.sh
 
 Note that the above scripts are used for 2-way 1-shot on S3DIS (S^0). You can modified the corresponding hyperparameters to conduct experiments on other settings. 
 
