@@ -2,7 +2,7 @@
 
 [Paper](https://arxiv.org/pdf/2401.16051) in 3DV2024 
 
-![teaser](asset/framework.pdf)
+![figure](asset/framework.pdf)
 
 ## Introduction
 
