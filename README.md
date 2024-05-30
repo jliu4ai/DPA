@@ -77,12 +77,14 @@ Note that the above scripts are used for 2-way 1-shot on S3DIS (S^0). You can mo
 ## Citation
 Please cite our paper if it is helpful to your research:
 
-    @inproceedings{zhao2021few,
-      title={Few-shot 3D Point Cloud Semantic Segmentation},
-      author={Zhao, Na and Chua, Tat-Seng and Lee, Gim Hee},
-      booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-      year={2021}
-    }
+@misc{liu2024dynamic,
+      title={Dynamic Prototype Adaptation with Distillation for Few-shot Point Cloud Segmentation}, 
+      author={Jie Liu and Wenzhe Yin and Haochen Wang and Yunlu CHen and Jan-Jakob Sonke and Efstratios Gavves},
+      year={2024},
+      eprint={2401.16051},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 
 
 ## Acknowledgement
