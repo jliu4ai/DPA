@@ -1,4 +1,6 @@
-# [Dynamic Prototype Adaptation with Distillation for Few-shot Point Cloud Semantic Segmentation](https://arxiv.org/pdf/2401.16051)
+# Dynamic Prototype Adaptation with Distillation for Few-shot Point Cloud Semantic Segmentation
+
+[Paper](https://arxiv.org/pdf/2401.16051) in 3DV2024 
 
 ![teaser](asset/framework.pdf)
 
